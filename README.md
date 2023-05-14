@@ -1,46 +1,57 @@
-# vue-project
+# Vue3 demo project
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+I created this project in order to recall my knowledge of `HTML`, `CSS` and `JS`/`TS` and to learn about `Vue3` and related tech stack like `vue-router`, `Pinia` or `i18n`.
 
 ## Project Setup
 
 ```sh
-npm install
+yarn install
 ```
 
 ### Compile and Hot-Reload for Development
 
 ```sh
-npm run dev
+yarn dev
 ```
 
 ### Type-Check, Compile and Minify for Production
 
 ```sh
-npm run build
+yarn build
 ```
 
 ### Lint with [ESLint](https://eslint.org/)
 
 ```sh
-npm run lint
+yarn lint
 ```
+
+## Application Demo
+
+The purpose of the app wasn't to solve any business problem but just to play with the technology, the app doesn't request data from the API but uses mock data.
+
+The application displays the recipes and gives the option of adding them to favourites or displaying the details on the right-hand drawer. In the favourites page, it is possible to display recipes that have already been added to favourites.
+The side menu with navigation can be opened or hidden. It is possible to change the language of the application to English or Polish.
+
+## GIF:
+
+![](https://github.com/kingus/Vue3-Demo-Project/blob/main/readme_assets/vue-app-demo.gif)
+
+## A few words about the tech stack used
+
+The `Vue3` application was generated with `TypeScript`. I chose the `Composition API` to define components. I used `vue-router` to navigate through the `SPA` and created the `MainLayout.vue` and used `<RouterView />` to display pages in it. I used `Pinia` to create stores that support the sidemenu state and contain information about favourite recipes.
+
+![](https://github.com/kingus/Vue3-Demo-Project/blob/main/readme_assets/pinia-state.png)
+
+To provide internationalisation of the application I used `i18n`, in which I added locales for English and Polish. Languages can be changed on the fly in the top right corner of the application via custom select component.
+
+I created a couple of custom components in which I defined props and events. Where appropriate, I used the `v-model` to simplify the use of the component.
+
+
+
+
+
+
+
+
+

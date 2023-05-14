@@ -1,4 +1,3 @@
-import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import type { IRecipe } from '@/components/RecipeCard.vue'
 
@@ -8,9 +7,7 @@ export interface IFavouritesStore {
 
 export const useFavouritesStore = defineStore('favourites', {
   state: (): IFavouritesStore => ({ favourites: [] }),
-  getters: {
-
-  },
+  getters: {},
   actions: {
     isRecipeFavourite(id: number): boolean {
       return this?.favourites.filter((item: IRecipe) => item.id == id).length > 0
@@ -21,8 +18,7 @@ export const useFavouritesStore = defineStore('favourites', {
       }
     },
     removeRecipe(id: number) {
-      this.favourites = this.favourites.filter((item: IRecipe) => item.id !== id);
-    },
-
-  },
+      this.favourites = this.favourites.filter((item: IRecipe) => item.id !== id)
+    }
+  }
 })
